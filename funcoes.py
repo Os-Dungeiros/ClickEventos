@@ -23,3 +23,24 @@ def cadastrar_usuario(lista,nome:str,email:str):
     lista.append(dadosAlunos.copy())
     dadosAlunos.clear()
     print("\033[1;32mUsuário {} cadastrado(a) com sucesso!\033[m".format(nome))
+def exibir_usuarios_cadastrados(lista):
+    for i,c in enumerate(lista):
+        print("{} --> {}".format(i+1,c["nome"].title()))
+
+
+def exibir_usuarios_cadastrados_ordem_alfabetica(lista):
+    listaAux = list()
+    for i in lista:
+        listaAux.append(i["nome"].title())
+    listaAux.sort()
+    for i,c in enumerate(listaAux):
+        print("{} --> {}".format(i+1,c))
+
+
+def verificar_usuario_nome(lista,nome:str):
+    for i,c in enumerate(lista):
+        if c["nome"] == nome:
+            return True
+            break
+        elif i == len(lista) - 1:
+            return False
