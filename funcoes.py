@@ -44,3 +44,28 @@ def verificar_usuario_nome(lista,nome:str):
             break
         elif i == len(lista) - 1:
             return False
+def verificar_usuario_email(lista,email:str):
+    for i,c in enumerate(lista):
+        if c["email"] == email:
+            return True
+            break
+        elif i == len(lista) - 1:
+            return False
+
+def remover_aluno(lista,email:str):
+    for i,c in enumerate(lista):
+        if c["email"] == email:
+            confirmacao = str(input("\033[1;33mTem certeza de que deseja excluir o usuário {} da lista? [S/N] : \033[m".format(c["nome"]))).upper().strip()
+            if confirmacao == "S" or confirmacao == "SIM" or confirmacao == "SI":
+                lista.pop(i)
+                print("\033[1;32mUsuário {} removido(a) da lista com sucesso!\033[m".format(c["nome"]))
+            else:
+                print("\033[1;32mPedido de exclusão cancelado com sucesso!\033[m")
+
+def alterar_nome_usuario(lista,email:str,novoNome:str):
+    cont = 0
+    for i,c in enumerate(lista):
+        if c["email"] == email:
+            print("\033[1;32mAlteração de {} para {} foi um sucesso!\033[m".format(c["nome"],novoNome))
+            c["nome"] = novoNome
+            break
