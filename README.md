@@ -13,6 +13,7 @@ Organize seu evento com a gente!
 
 <p>Leonardo Panciarelli</p> <p> RA : 21272675</p>
 
+![download](https://user-images.githubusercontent.com/90358599/137813172-a5eaf132-f017-4db3-8f52-4f01449e676c.jpeg)
 
 <p>O novo organizador de eventos chegou para ficar!</p>
 
