@@ -22,9 +22,9 @@ def cadastrar_usuario(lista,nome:str,email:str):
     jaTem = False
     for i,c in enumerate(lista):
         if c["email"] == email:
-            jaTem = False
-        elif i == len(lista) - 1:
             jaTem = True
+        elif i == len(lista) - 1:
+            jaTem = False
     if jaTem == False:
         dadosAlunos = {"nome":nome,"email":email}
         lista.append(dadosAlunos.copy())
