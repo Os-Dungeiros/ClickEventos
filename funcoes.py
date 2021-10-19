@@ -1,18 +1,18 @@
 def criar_cabecalho(titulo:str,temSinal = False,tamanhoLinha = 55):
     if temSinal == True:
-        print("-=-"18)
+        print("-=-"*18)
         print(titulo.center(60))
-        print("-=-"18)
+        print("-=-"*18)
     else:
-        print("-"tamanhoLinha)
+        print("-"*tamanhoLinha)
         print(titulo.center(tamanhoLinha))
-        print("-"tamanhoLinha)
+        print("-"*tamanhoLinha)
 
 
 def criar_menu(lista,titulo:str,tamanhoLinha = 55):
-    print("-"tamanhoLinha)
+    print("-"*tamanhoLinha)
     print(titulo.center(tamanhoLinha))
-    print("-"tamanhoLinha)
+    print("-"*tamanhoLinha)
     for i,c in enumerate(lista):
         print("\033[1;33m[{}]\033[m {}".format(i+1,c))
     print("-"*tamanhoLinha)
