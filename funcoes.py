@@ -78,7 +78,6 @@ def remover_aluno(lista,email:str):
                 
 
 def alterar_nome_usuario(lista,email:str,novoNome:str):
-    cont = 0
     for i,c in enumerate(lista):
         if c["email"] == email:
             print("\033[1;32mAlteração de {} para {} foi um sucesso!\033[m".format(c["nome"],novoNome))
